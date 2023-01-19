@@ -4,7 +4,7 @@ using System.Reflection;
 internal class TicTacToe
 {
     public static char[] fieldArray = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
-    
+
     static int counter = 1;
     static void Main(string[] args)
     {
@@ -39,7 +39,7 @@ internal class TicTacToe
     static void EnterYourPosition()
     {
         int getPositionNumber;
-        
+
         do
         {
             Console.WriteLine("Please Enter Number from 0 to 9");
@@ -51,7 +51,7 @@ internal class TicTacToe
                 fieldArray[getPositionNumber] = 'O';
                 counter++;
             }
-            else 
+            else
             {
                 fieldArray[getPositionNumber] = 'O';
                 counter++;
@@ -85,8 +85,8 @@ internal class TicTacToe
         static int CheckWin()
         {
             //Horzontal
-            if ((fieldArray[0] == 'X' && fieldArray[1]=='X' && fieldArray[2] =='X')||
-                (fieldArray[3] == 'X' && fieldArray[4] == 'X' && fieldArray[5] == 'X')||
+            if ((fieldArray[0] == 'X' && fieldArray[1] == 'X' && fieldArray[2] == 'X') ||
+                (fieldArray[3] == 'X' && fieldArray[4] == 'X' && fieldArray[5] == 'X') ||
                 (fieldArray[6] == 'X' && fieldArray[7] == 'X' && fieldArray[8] == 'X'))
             {
                 return 1;
@@ -131,15 +131,5 @@ internal class TicTacToe
             }
         }
     }
-    static string GetSymbol()
-    {
-        if (counter % 2 == 1)
-        {
-            return "X";
-        }
-        else
-        {
-            return "O";
-        }
-    }
+
 }
